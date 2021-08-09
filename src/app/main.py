@@ -10,8 +10,10 @@ modelo = pickle.load(open('../../models/modelo.sav','rb'))
 
 app = Flask(__name__)
 # Autenticacao com variaveis de ambiente
-app.config['BASIC_AUTH_USERNAME'] = os.environ.get("BASIC_AUTH_USERNAME")
-app.config['BASIC_AUTH_PASSWORD'] = os.environ.get("BASIC_AUTH_PASSWORD")
+#app.config['BASIC_AUTH_USERNAME'] = "os.environ.get("BASIC_AUTH_USERNAME")"
+#app.config['BASIC_AUTH_PASSWORD'] = os.environ.get("BASIC_AUTH_PASSWORD")
+app.config['BASIC_AUTH_USERNAME'] = "admin"
+app.config['BASIC_AUTH_PASSWORD'] = "pass"
 
 basic_auth = BasicAuth(app)
 
